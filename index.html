@@ -20,10 +20,27 @@
 	<div class="preloader">
 		<div class="preloader_image"></div>
 	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Login With</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<button type="button" class="btn btn-primary" onclick="redirectCustLogin();return false;">Customer Login</button>
+							<button type="button" class="btn btn-success" onclick="redirectMfacLogin();return false;">Company Login</button>
+						</div>
+					</div>
+				</div>
+	</div>
 	<!-- wrapper -->
 	<div id="canvas">
 		<div id="box_wrapper">
-			<!-- template sections -->
+			<!-- header sections -->
 			<section class="page_topline cs main_color2 table_section table_section_sm section_padding_top_5 section_padding_bottom_5">
 				<div class="container">
 					<div class="row">
@@ -88,12 +105,12 @@
 									</ul>
 								</nav>
 								<!-- eof main nav -->
-								<!-- header toggler --><span class="toggle_menu"><span></span></span>
+								<span class="toggle_menu"><span></span></span>
 							</div>
 							<div class="header_right_buttons cs display_table_cell text-right">
 								<ul class="inline-list menu greylinks">
 									<li> 
-                                        <a href="#" class="theme_button color2 inverse min_width_button login-bg"><i class="fa fa-user" aria-hidden="true"></i> Login</a> 
+                                        <a href="#" class="theme_button color2 inverse min_width_button login-bg" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user" aria-hidden="true"></i> Login</a> 
                                     </li>
 								</ul>
 							</div>
@@ -162,7 +179,8 @@
 				</div>
 				<!-- eof flexslider -->
             </section>
-            
+			
+			<!-- About section -->
 			<section id="about" class="ls section_padding_top_150 section_padding_bottom_150">
 				<div class="container">
 					<div class="row">
@@ -175,30 +193,72 @@
 						<div class="col-md-4 col-sm-6">
 							<div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
 								<div class="teaser_icon size_big highlight"> <i class="rt-icon2-user"></i> </div>
-								<h4 class="topmargin_20 hover-color2"><a href="team.html">Pharma Team</a></h4>
-								<p class="content-3lines-ellipsis">Company was founded by scientists dedicated to create new therapeutics.</p>
-								<p class="topmargin_30 bottommargin_0"> <a href="team.html" class="theme_button color2 inverse min_width_button">Our Team</a> </p>
+								<h4 class="topmargin_20 hover-color2"><a href="team.html">High Availability</a></h4>
+								<p class="content-3lines-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum illum itaque saepe eos rem id facilis inventore, tenetur dicta error incidunt excepturi sint in veritatis!</p>
+								<!-- <p class="topmargin_30 bottommargin_0"> <a href="team.html" class="theme_button color2 inverse min_width_button">Our Team</a> </p> -->
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
-							<div class="teaser hover_icon with_padding big-padding with_border rounded text-center with_corner_border">
+							<div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
 								<div class="teaser_icon size_big highlight"> <i class="rt-icon2-bulb"></i> </div>
-								<h4 class="topmargin_20 hover-color2"><a href="departments.html">Pharma Focus</a></h4>
-								<p class="content-3lines-ellipsis">We Interrogate the inner life of GPCR signaling to develop newest therapeutics.</p>
-								<p class="topmargin_30 bottommargin_0"> <a href="departments.html" class="theme_button color2 min_width_button">Discover Now</a> </p> <span class="bottom_corners"></span> </div>
+								<h4 class="topmargin_20 hover-color2"><a href="departments.html">Quality Products</a></h4>
+								<p class="content-3lines-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum illum itaque saepe eos rem id facilis inventore, tenetur dicta error incidunt excepturi sint in veritatis!</p>
+								<!-- <p class="topmargin_30 bottommargin_0"> <a href="departments.html" class="theme_button color2 min_width_button">Discover Now</a> </p>  -->
+								<!-- <span class="bottom_corners"></span>  -->
+							</div>
 						</div>
 						<div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
 							<div class="teaser hover_icon with_padding big-padding with_border rounded text-center">
 								<div class="teaser_icon size_big highlight"> <i class="rt-icon2-paperplane"></i> </div>
-								<h4 class="topmargin_20 hover-color2"><a href="pipeline.html">Pharma Pipeline</a></h4>
-								<p class="content-3lines-ellipsis">Consetetur sadipscing elitr sediam nonumy eirmod tempor invidunt labore magna.</p>
-								<p class="topmargin_30 bottommargin_0"> <a href="pipeline.html" class="theme_button color2 inverse min_width_button">Check It</a> </p>
+								<h4 class="topmargin_20 hover-color2"><a href="pipeline.html">Maximum Discounts</a></h4>
+								<p class="content-3lines-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum illum itaque saepe eos rem id facilis inventore, tenetur dicta error incidunt excepturi sint in veritatis!</p>
+								<!-- <p class="topmargin_30 bottommargin_0"> <a href="pipeline.html" class="theme_button color2 inverse min_width_button">Check It</a> </p> -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="products" class="ds color parallax page_gallery section_padding_top_100 section_padding_bottom_150 columns_padding_25">
+
+			<!-- Counter section -->
+			<section class="cs gradient section_padding_top_65 section_padding_bottom_50 columns_margin_bottom_20">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
+								<div class="teaser text-center">
+									<h3 class="counter" data-from="0" data-to="25" data-speed="2100">0</h3>
+									<p>Years Experience</p>
+								</div>
+							</div>
+							<div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
+								<div class="teaser text-center">
+									<h3 class="counter" data-from="0" data-to="893" data-speed="2100">0</h3>
+									<p>Medicament Invented</p>
+								</div>
+							</div>
+							<div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
+								<div class="teaser text-center">
+									<h3 class="counter" data-from="0" data-to="75" data-speed="2100">0</h3>
+									<p>Awards Winned</p>
+								</div>
+							</div>
+							<div class="col-md-20 col-sm-6 col-xs-6 col-xxs-12">
+								<div class="teaser text-center">
+									<h3 class="counter-wrap"> <span class="counter" data-from="0" data-to="673" data-speed="2100"></span> <span class="counter-add">k</span> </h3>
+									<p>Happy Clients</p>
+								</div>
+							</div>
+							<div class="col-md-20 col-sm-6 col-xs-12">
+								<div class="teaser text-center">
+									<h3 class="counter" data-from="0" data-to="751" data-speed="2100">0</h3>
+									<p>Pharmacies Partners</p>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<!-- product section -->
+			<!-- <section id="products" class="ds color parallax page_gallery section_padding_top_100 section_padding_bottom_150 columns_padding_25">
 				<div class="container">
 					<div class="row display_table_md">
 						<div class="col-md-6 col-md-push-6 display_table_cell_md"> <img src="images/gallery/01.jpg" alt="" class="rounded"> </div>
@@ -252,7 +312,9 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
+
+			<!-- Feature section -->
 			<section id="features" class="ls section_padding_top_150 section_padding_bottom_130 columns_margin_bottom_30">
 				<div class="container">
 					<div class="row">
@@ -301,43 +363,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="cs gradient section_padding_top_65 section_padding_bottom_50 columns_margin_bottom_20">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
-							<div class="teaser text-center">
-								<h3 class="counter" data-from="0" data-to="25" data-speed="2100">0</h3>
-								<p>Years Experience</p>
-							</div>
-						</div>
-						<div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
-							<div class="teaser text-center">
-								<h3 class="counter" data-from="0" data-to="893" data-speed="2100">0</h3>
-								<p>Medicament Invented</p>
-							</div>
-						</div>
-						<div class="col-md-20 col-sm-4 col-xs-6 col-xxs-12">
-							<div class="teaser text-center">
-								<h3 class="counter" data-from="0" data-to="75" data-speed="2100">0</h3>
-								<p>Awards Winned</p>
-							</div>
-						</div>
-						<div class="col-md-20 col-sm-6 col-xs-6 col-xxs-12">
-							<div class="teaser text-center">
-								<h3 class="counter-wrap"> <span class="counter" data-from="0" data-to="673" data-speed="2100"></span> <span class="counter-add">k</span> </h3>
-								<p>Happy Clients</p>
-							</div>
-						</div>
-						<div class="col-md-20 col-sm-6 col-xs-12">
-							<div class="teaser text-center">
-								<h3 class="counter" data-from="0" data-to="751" data-speed="2100">0</h3>
-								<p>Pharmacies Partners</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="pipeline" class="ds color background_cover page_features section_padding_top_150 section_padding_bottom_150">
+
+			<!-- Pipeline section -->
+			<!-- <section id="pipeline" class="ds color background_cover page_features section_padding_top_150 section_padding_bottom_150">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-md-8 col-md-offset-4 col-lg-offset-6">
@@ -392,56 +420,43 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<section id="blog" class="ls section_padding_top_150 section_padding_bottom_130">
+			</section> -->
+
+			<!-- faq section -->
+			<section id="faq" class="ls section_padding_top_150 section_padding_bottom_130 bg-f5f5f5">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<h2 class="section_header text-center">Our Recent Blogs</h2>
-							<div class="owl-carousel text-nav" data-nav="true" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1">
+							<h2 class="section_header text-center">FAQ's</h2>
+							<div class="text-nav" data-nav="true" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="panel-group" id="posts-accordion1">
 											<div class="panel panel-blog-post">
-												<div class="panel-heading"> <a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse1">
-										</a>
-													<div class="date entry-meta-corner"> <span>09</span> <span>10/17</span> </div>
-													<h4 class="hover-color2"> <a href="blog-single-right.html">At vero eos et accusam justo duo</a> </h4>
-													<div class="content-justify greylinks fontsize_12"> <a href="#">
-												<i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Sam C. Hood
-											</a> <a href="#">
-												<i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">87</span>
-											</a> </div>
+												<div class="panel-heading"> 
+													<a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse1"></a>
+													<div class="date entry-meta-corner"> <span>01</span> </div>
+													<h4 class="hover-color2"> At vero eos et accusam justo duo </h4>
 												</div>
 												<div id="blog-collapse1" class="panel-collapse collapse in">
 													<div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
 												</div>
 											</div>
 											<div class="panel panel-blog-post">
-												<div class="panel-heading"> <a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse2" class="collapsed">											
-										</a>
-													<div class="date entry-meta-corner"> <span>07</span> <span>10/17</span> </div>
-													<h4 class="hover-color2"> <a href="blog-single-right.html">Dolores et ea rebum clita kasd</a> </h4>
-													<div class="content-justify greylinks fontsize_12"> <a href="#">
-												<i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Sandra C. Vasquez
-											</a> <a href="#">
-												<i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
-											</a> </div>
+												<div class="panel-heading"> 
+													<a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse2" class="collapsed"></a>
+													<div class="date entry-meta-corner"> <span>02</span> </div>
+													<h4 class="hover-color2"> Dolores et ea rebum clita kasd</h4>
 												</div>
 												<div id="blog-collapse2" class="panel-collapse collapse">
 													<div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
 												</div>
 											</div>
 											<div class="panel panel-blog-post">
-												<div class="panel-heading"> <a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse3" class="collapsed">											
-										</a>
-													<div class="date entry-meta-corner"> <span>04</span> <span>10/17</span> </div>
-													<h4 class="hover-color2"> <a href="blog-single-right.html">Gubergren no sea takimata sanctus</a> </h4>
-													<div class="content-justify greylinks fontsize_12"> <a href="#">
-												<i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Paul K. Reynolds
-											</a> <a href="#">
-												<i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
-											</a> </div>
+												<div class="panel-heading"> 
+													<a data-toggle="collapse" data-parent="#posts-accordion1" href="#blog-collapse3" class="collapsed"></a>
+													<div class="date entry-meta-corner"> <span>04</span></div>
+													<h4 class="hover-color2">Gubergren no sea takimata sanctus </h4>
 												</div>
 												<div id="blog-collapse3" class="panel-collapse collapse">
 													<div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium amet ea dicta neque, ut quis omnis quos nam, pariatur, minus, fugit suscipit aspernatur sint ullam quas explicabo. Alias, officiis, dolor! </div>
@@ -451,21 +466,14 @@
 									</div>
 									<div class="col-md-6">
 										<div class="vertical-item content-absolute content-padding">
-											<div class="item-media rounded overflow_hidden ds black"> <img src="images/blog_post1.jpg" alt="">
-												<div class="date entry-meta-corner main_bg_color"> <span>04</span> <span>10/17</span> </div>
-											</div>
-											<div class="item-content ds">
-												<h4 class="entry-title highlight hover-color2 bottommargin_0"> <a href="blog-single-right.html">Lorem ipsum dolor amet, consetetur sadipscing</a> </h4>
-												<div class="content-justify darklinks fontsize_12 regular"> <a href="#">
-											<i class="fa fa-user rightpadding_5" aria-hidden="true"></i> by Margarita R. Miller
-										</a> <a href="#">
-											<i class="fa fa-comment rightpadding_5" aria-hidden="true"></i> <span class="amount">75</span>
-										</a> </div>
+											<div class="item-media rounded overflow_hidden ds black"> 
+												<img src="images/blog_post1.jpg" alt="">
+												<h4 class="contact-btn"><a href="#">Contact +91 80522587</a></h4>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="row">
+								<!-- <div class="row">
 									<div class="col-md-6">
 										<div class="panel-group" id="posts-accordion2">
 											<div class="panel panel-blog-post">
@@ -530,12 +538,14 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<!-- testimonial section -->
 			<section id="testimonials" class="ds color parallax page_testimonials section_padding_top_150 section_padding_bottom_150">
 				<div class="container">
 					<div class="row">
@@ -601,6 +611,8 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- Contact section -->
 			<section id="contact" class="ls section_padding_top_150 section_padding_bottom_150">
 				<div class="container">
 					<div class="row">
@@ -632,6 +644,8 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- company section -->
 			<section class="cs gradient section_padding_top_50 section_padding_bottom_50">
 				<div class="container-fluid">
 					<div class="row">
@@ -659,6 +673,7 @@
 					</div>
 				</div>
 			</section>
+
 			<footer class="page_footer ds color section_padding_top_100 section_padding_bottom_65 table_section">
 				<div class="container">
 					<div class="row">
@@ -702,6 +717,7 @@
 					</div>
 				</div>
 			</footer>
+
 			<section class="ds color darker page_copyright section_padding_15">
 				<div class="container">
 					<div class="row">
@@ -715,9 +731,48 @@
 		<!-- eof #box_wrapper -->
 	</div>
 	<!-- eof #canvas -->
+
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
 	<!-- <script src="js/switcher.js"></script> -->
+
+
+	<script>
+		function redirectCustLogin(){
+				url="https://www.liveconnect.in";
+				if(navigator.userAgent.match(/Android/i)){
+				url="https://play.google.com/store/apps/details?id=com.c2info.liveconnect.productlist&hl=en";
+				}
+				if(navigator.userAgent.match(/iPhone/i)
+				|| navigator.userAgent.match(/iPad/i)
+				|| navigator.userAgent.match(/iPod/i)){
+
+				url="https://apps.apple.com/in/app/liveconnect/id1179736465";
+				}
+
+					window.open(url);
+				}
+
+				function redirectMfacLogin(){
+					url="http://www.stockandsales.com";
+					if(navigator.userAgent.match(/Android/i)){
+					url="https://play.google.com/store/apps/details?id=com.c2info.sas&hl=en";
+					}
+					if(navigator.userAgent.match(/webOS/i)
+					|| navigator.userAgent.match(/iPhone/i)
+					|| navigator.userAgent.match(/iPad/i)
+					|| navigator.userAgent.match(/iPod/i)
+					|| navigator.userAgent.match(/BlackBerry/i)
+					|| navigator.userAgent.match(/Windows Phone/i)){
+
+					url="http://mobile.stockandsales.com";
+					}
+
+						window.open(url);
+					}
+	</script>
+
+	
 </body>
 
 </html>

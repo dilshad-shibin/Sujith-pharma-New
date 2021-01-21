@@ -5265,8 +5265,8 @@ body.boxed {
 }
 
 .with_corner_border.with_border .bottom_corners:before {
-	bottom: -2px;
-	left: -2px;
+	bottom: 0px;
+	left: 5px;
 }
 
 .with_corner_border.with_border .bottom_corners:after {
@@ -6223,8 +6223,8 @@ body.boxed {
 	display: block;
 	display: -webkit-box;
 	font-size: 16px;
-	height: 72px;
-	-webkit-line-clamp: 3;
+	/* height: 72px; */
+	/* -webkit-line-clamp: 3; */
 	line-height: 24px;
 	margin: 0 auto;
 	max-width: 400px;
@@ -13033,6 +13033,12 @@ widget_pages
 	animation: scaleDisappear 0.5s;
 }
 
+.hover_icon:hover{
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+	transform: scale(1.1);
+    transition: all ease .5s;
+}
+
 .hover_icon:hover .teaser_icon.highlight {
 	color: #ec5c42;
 }
@@ -15167,4 +15173,22 @@ a.color-icon.border-icon:hover {
 	border-color: #ec5c42 !important;
 	background-color: #ec5c42 !important;
 	transition: 0.2s ease-in;
+}
+
+.bg-f5f5f5{
+	background: #f5f5f5;
+}
+
+.contact-btn{
+	position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+.contact-btn a{
+	color: #19bcdb !important;
 }
