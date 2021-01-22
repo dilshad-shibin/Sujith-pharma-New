@@ -1135,7 +1135,7 @@ input[type*="password"],
 
 @media (min-width: 992px) {
 	.panel-blog-post .panel-heading {
-		padding: 18px 30px 18px 100px;
+		padding: 25px 30px 25px 100px;
 	}
 }
 
@@ -15169,6 +15169,12 @@ a.color-icon.border-icon:hover {
 	background-color: #fff !important;
 }
 
+.login-bg:active,
+.login-bg:focus{
+	color: #fff !important;
+    background-color: #ec5c42 !important;
+}
+
 .login-bg:hover{
 	border-color: #ec5c42 !important;
 	background-color: #ec5c42 !important;
@@ -15191,4 +15197,31 @@ a.color-icon.border-icon:hover {
 
 .contact-btn a{
 	color: #19bcdb !important;
+}
+
+.map-responsive{
+	position: relative;
+    padding-bottom: 100.25%;
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+}
+
+.map-responsive iframe{
+	width: 100%;
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+@media(min-width:576px){
+	.map-responsive{
+		padding-bottom: 32.25%;
+	}
+}
+
+.btn-modal{
+	padding: 15px 30px;
+    border-radius: 15px;
 }
