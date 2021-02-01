@@ -4871,6 +4871,18 @@ header [class*="col-"],
     opacity: .5;
 }
 
+@media(max-width:479px){
+	.history-header::after{
+		top: -100% !important;
+	}
+}
+
+@media(max-width:390px){
+	.history-header::after{
+		font-size: 4em;
+	}
+}
+
 .about-content, .about-vision{
 	margin: 50px 0;
 }
